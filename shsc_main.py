@@ -90,7 +90,6 @@ def calculate_root_lowest_k(points,sample_size,iteration,k,curvature):
       best_2=points[lowest_k_triplets[l][1],:]
       best_3=points[lowest_k_triplets[l][2],:]
       update=mob_addition(update,mob_addition(mob_addition(best_1,best_2,curvature),best_3,curvature),curvature)
-      #update=mob_multiplication(1/3,update,curvature)
     recurring_centroid=mob_addition(recurring_centroid,update,curvature)
   final_centroid=mob_multiplication(1/(sample_size*iteration),recurring_centroid,curvature)
   return final_centroid
