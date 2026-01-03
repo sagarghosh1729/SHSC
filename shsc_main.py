@@ -177,9 +177,8 @@ labels=np.zeros((n))
 lb=nearest_neighbour_label(sample_data,z,cluster_labels_h,0.0,-1)
 
 
-#calculating ARI, NMI
+#calculating NMI
 
-ari=adjusted_rand_score(y,lb)
 nmi=normalized_mutual_info_score(y,lb)
 print(ari)
 print(nmi)
@@ -199,6 +198,7 @@ plt.title('t-SNE Visualization of the SHSC Clusters')
 plt.xlabel('Dimension 1')
 plt.ylabel('Dimension 2')
 plt.show()
+
 
 
 
